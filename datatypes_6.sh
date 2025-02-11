@@ -7,6 +7,6 @@ num2=$2
 
 # if a valid no is not given , it will consider as 0
 
-res=$((num1+num2))
+res=$(($num1+$num2))
 echo "total is $res"
 
