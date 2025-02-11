@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# arrays
+# Arrays
 fruits=("apple" "banana" "mango")
 
 echo "first value: ${fruits[1]}"
