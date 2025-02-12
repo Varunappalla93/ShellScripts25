@@ -13,7 +13,7 @@ fi
 
 
 ID=$(id -u) 
-echo "Sdript name : $0"
+echo "Script name : $0"
 
 
 if [ $ID -ne 0 ]

@@ -10,3 +10,5 @@ num2=$2
 res=$(($num1+$num2))
 echo "total is $res"
 
+echo "how many args are passed $#"
+
