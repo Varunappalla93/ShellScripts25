@@ -24,6 +24,7 @@ fi
 
 
 yum install mysql -y
+# passing args in function
 VALIDATE $? "Installing mysql"
 
 yum install git -y
