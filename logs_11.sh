@@ -1,25 +1,29 @@
 #!/bin/bash
 
+ID=$(id -u) 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
 VALIDATE()
 {
     if [ $1 -ne 0 ]
     then
-        echo "$2 is failed"
+        echo -e "ERROR:: $2 is $R failed $N"
         exit 1
     else
-        echo "$2 is success"
+        echo "$2 is $G success $N"
 fi
 }
 
 
-ID=$(id -u) 
-TIMESTAMP=$(date +%F-%H-%M-%S)
-
-LOGFILE="/tmp/$0-$TIMESTAMP.log"
-
 if [ $ID -ne 0 ]
 then
-    echo "Error, pls try with root user"
+    echo "$R Error, pls try with root user $N"
     exit 1 # non-zero
 else
    echo "you are root user"
