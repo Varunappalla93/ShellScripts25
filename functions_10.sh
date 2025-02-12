@@ -12,7 +12,6 @@ fi
 }
 
 
-
 ID=$(id -u) 
 
 if [ $ID -ne 0 ]
@@ -22,6 +21,7 @@ then
 else
    echo "you are root user"
 fi
+
 
 yum install mysql -y
 VALIDATE $? "Installing mysql"
