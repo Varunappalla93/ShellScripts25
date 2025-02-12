@@ -2,12 +2,12 @@
 
 VALIDATE()
 {
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then
-        echo "installing software failed"
+        echo "$2 is failed"
         exit 1
     else
-        echo "installing software success"
+        echo "$2 is success"
 fi
 }
 
@@ -24,7 +24,7 @@ else
 fi
 
 yum install mysql -y
-VALIDATE
+VALIDATE $? "Installing mysql"
 
 yum install git -y
-VALIDATE
+VALIDATE $? "Installing git"
