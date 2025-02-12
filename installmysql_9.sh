@@ -7,3 +7,4 @@ then
     echo "Error, pls try with root user"
 else
    echo "you are root user"
+fi
