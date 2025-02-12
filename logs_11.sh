@@ -23,7 +23,7 @@ fi
 
 if [ $ID -ne 0 ]
 then
-    echo "$R Error, pls try with root user $N"
+    echo -e "$R Error, pls try with root user $N"
     exit 1 # non-zero
 else
    echo "you are root user"
