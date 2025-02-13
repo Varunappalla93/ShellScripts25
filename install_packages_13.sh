@@ -36,11 +36,12 @@ fi
 # echo "All args passed : $@" - git mysql postfix
 for package in $@
 do
-yum list installed $package &>>$LOGFILE
-if [ $? -ne 0 ]
-then
-    yum install $package -y &>>$LOGFILE
-    VALIDATE $? "Installing of $package"
-else
-    echo -e "$package is already installed..$Y SKIPPING $N"
+    yum list installed $package &>>$LOGFILE
+    if [ $? -ne 0 ]
+    then
+        yum install $package -y &>>$LOGFILE
+        VALIDATE $? "Installing of $package"
+    else
+        echo -e "$package is already installed..$Y SKIPPING $N"
+    fi
 done
