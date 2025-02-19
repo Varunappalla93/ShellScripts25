@@ -6,14 +6,14 @@ disk_threshold=1
 
 message=""
 
-while IFS=read line
+while IFS= read line
 do
     usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)
     partition=$(echo $line | awk '{print $1F}')
 
     if [ $usage -ge disk_threshold ]
     then
-        message+="High disk usage on $partition:$usage"
+        message+="High disk usage on $partition:$usage\n"
     fi
 done <<< $disk_usage
 
@@ -27,7 +27,7 @@ echo "Message:$message"
 
 
 
-
+c
 
 
 # df -HT -> /dev/xvda1 -  to check disk volumes
