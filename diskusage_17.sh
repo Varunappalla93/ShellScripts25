@@ -24,9 +24,9 @@ echo -e "Message:$message"
 sh mail_18.sh "DevOps team" "high disk usage" "$message" "info@gmail.com" "Alert-High Disk Usage"
 
 
+
+
 # df -HT -> /dev/xvda1 -  to check disk volumes
 # df -HT | grep xfs - to get xfs type
-
-
 # df -HT | grep -v tmp - to get other files type other than tmp files type
 # df -HT | grep -vE 'tmp|File' - to get other files type other than tmp files type without headers
