@@ -17,7 +17,7 @@ do
     fi
 done <<< $disk_usage
 
-echo "Message:$message"
+echo -e "Message:$message"
 
 
 
