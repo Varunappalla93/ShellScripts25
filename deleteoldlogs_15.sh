@@ -9,7 +9,7 @@ Y="\e[0m"
 
 # touch -d 20231201 user.log - to create old files
 
-if [! -d $SRC_DIR ] # -d for exists, hence used ! to check if it does not exist
+if [ ! -d $SRC_DIR ] # -d for exists, hence used ! to check if it does not exist
 then
     echo -e "$R source directory:$SRC_DIR  does not exist.$N"
     mkdir $SRC_DIR
