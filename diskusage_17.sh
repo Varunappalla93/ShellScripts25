@@ -21,15 +21,6 @@ echo -e "Message:$message"
 
 
 
-
-
-
-
-
-
-c
-
-
 # df -HT -> /dev/xvda1 -  to check disk volumes
 # df -HT | grep xfs - to get xfs type
 
