@@ -19,6 +19,9 @@ done <<< $disk_usage
 
 echo -e "Message:$message"
 
+# echo "$message" | mail -s "High disk usage" info@gmail.com
+
+sh mail_18.sh "DevOps team" "high disk usage" "$message" "info@gmail.com" "Alert-High Disk Usage"
 
 
 # df -HT -> /dev/xvda1 -  to check disk volumes
