@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC_DIR="/tmp/shellscript-logs"
+SRC_DIR=/tmp/shellscript-logs
 
 R="\e[31m"
 G="\e[32m"
