@@ -17,7 +17,7 @@ USAGE()
 while getopts ":n:w:h" opt;do
     case $opt in 
         n) name="$OPTARG";;
-        w) wishes="$OPTARG"
+        w) wishes="$OPTARG";;
         h|*) USAGE;exit;;
     esac
 done
